@@ -6,7 +6,7 @@
 
     <groupId>mengxiao.plugins</groupId>
     <artifactId>licensee-plugin</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,7 +16,7 @@
         <dependency>
             <groupId>io.zhile.research</groupId>
             <artifactId>ja-netfilter</artifactId>
-            <version>2.0.0</version>
+            <version>2.0.1</version>
             <systemPath>${basedir}/libs/ja-netfilter.jar</systemPath>
             <scope>system</scope>
         </dependency>

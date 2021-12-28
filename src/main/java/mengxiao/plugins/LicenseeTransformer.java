@@ -9,10 +9,10 @@ import jdk.internal.org.objectweb.asm.tree.*;
 import java.util.Iterator;
 import java.util.List;
 
-public class MapTransformer implements MyTransformer {
+public class LicenseeTransformer implements MyTransformer {
     private final List<FilterRule> rules;
 
-    public MapTransformer(List<FilterRule> rules) {
+    public LicenseeTransformer(List<FilterRule> rules) {
         this.rules = rules;
     }
 

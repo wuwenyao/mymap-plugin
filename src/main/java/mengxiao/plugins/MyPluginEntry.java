@@ -17,7 +17,7 @@ public class MyPluginEntry implements PluginEntry {
 
     @Override
     public void init(Environment environment, PluginConfig config) {
-        transformers.add(new MapTransformer(config.getBySection(PLUGIN_NAME)));
+        transformers.add(new LicenseeTransformer(config.getBySection(PLUGIN_NAME)));
     }
 
     @Override
@@ -32,7 +32,7 @@ public class MyPluginEntry implements PluginEntry {
 
     @Override
     public String getVersion() {
-        return "v2.0.0";
+        return "v2.0.1";
     }
 
     @Override
