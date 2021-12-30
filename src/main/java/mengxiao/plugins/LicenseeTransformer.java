@@ -27,17 +27,15 @@ public class LicenseeTransformer implements MyTransformer {
         ClassReader reader = new ClassReader(classBytes);
         ClassNode node = new ClassNode(327680);
         reader.accept(node, 0);
-        Iterator<MethodNode> iterator = node.methods.iterator();
 
-        while (iterator.hasNext()) {
-            MethodNode mn = iterator.next();
-            if ("put".equals(mn.name) && "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;".equals(mn.desc)) {
+        for (MethodNode methodNode : node.methods) {
+            if ("put".equals(methodNode.name) && "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;".equals(methodNode.desc)) {
                 InsnList list = new InsnList();
                 list.add(new VarInsnNode(25, 1));
                 list.add(new VarInsnNode(25, 2));
                 list.add(new MethodInsnNode(184, "mengxiao/plugins/PutFilter", "testPut", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", false));
                 list.add(new VarInsnNode(58, 2));
-                mn.instructions.insert(list);
+                methodNode.instructions.insert(list);
             }
         }
 

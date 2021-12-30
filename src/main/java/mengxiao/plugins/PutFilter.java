@@ -16,11 +16,9 @@ public class PutFilter {
     }
 
     public static void setRules(List<FilterRule> rules) {
-        map = new HashMap(2 >> 2);
-        Iterator<FilterRule> iterator = rules.iterator();
+        map = new HashMap();
 
-        while (iterator.hasNext()) {
-            FilterRule rule = iterator.next();
+        for (FilterRule rule : rules) {
             if (rule.getType() == RuleType.EQUAL) {
                 String[] sections = rule.getRule().split("->", 2);
                 if (2 != sections.length) {
