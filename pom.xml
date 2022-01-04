@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>mengxiao.plugins</groupId>
-    <artifactId>licensee-plugin</artifactId>
+    <artifactId>mymap-plugin</artifactId>
     <version>2.0.1</version>
 
     <properties>
