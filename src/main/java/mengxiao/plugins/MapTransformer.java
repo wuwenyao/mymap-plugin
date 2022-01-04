@@ -6,13 +6,12 @@ import jdk.internal.org.objectweb.asm.ClassReader;
 import jdk.internal.org.objectweb.asm.ClassWriter;
 import jdk.internal.org.objectweb.asm.tree.*;
 
-import java.util.Iterator;
 import java.util.List;
 
-public class LicenseeTransformer implements MyTransformer {
+public class MapTransformer implements MyTransformer {
     private final List<FilterRule> rules;
 
-    public LicenseeTransformer(List<FilterRule> rules) {
+    public MapTransformer(List<FilterRule> rules) {
         this.rules = rules;
     }
 

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyPluginEntry implements PluginEntry {
-    private static final String PLUGIN_NAME = "Licensee";
+    private static final String PLUGIN_NAME = "MyMap";
     private final List<MyTransformer> transformers = new ArrayList<>();
 
     public MyPluginEntry() {
@@ -17,7 +17,7 @@ public class MyPluginEntry implements PluginEntry {
 
     @Override
     public void init(Environment environment, PluginConfig config) {
-        transformers.add(new LicenseeTransformer(config.getBySection(PLUGIN_NAME)));
+        transformers.add(new MapTransformer(config.getBySection(PLUGIN_NAME)));
     }
 
     @Override
@@ -37,7 +37,7 @@ public class MyPluginEntry implements PluginEntry {
 
     @Override
     public String getDescription() {
-        return "LicenseeName plugin for ja-netfilter";
+        return "MyMap plugin for ja-netfilter";
     }
 
     @Override
